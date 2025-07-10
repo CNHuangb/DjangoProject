@@ -20,6 +20,9 @@ class Article(models.Model):
     title = models.CharField(max_length=100)
     content = models.TextField()
 
+
+    pub_time = models.DateTimeField(auto_now_add=True, null= True)
+
     # author 外键
     author = models.ForeignKey('User', on_delete=models.CASCADE, related_name='articles')
     tags = models.ManyToManyField('Tag', related_name= 'articles')
