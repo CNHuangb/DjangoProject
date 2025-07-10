@@ -1,0 +1,1 @@
+alert("我是来自static的文件")

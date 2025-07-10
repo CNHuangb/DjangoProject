@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>if标签</title>
+</head>
+
+<body>
+<h1 style="background-color:rgb(235, 91, 192);">
+    欢迎来到知了课堂
+</h1>
+
+
+
+
+{% if age > 18 %}
+    <p>您可以进入网吧</p>
+{% elif age == 18 %}
+    <p>您刚满18岁，需要再观察一下</p>
+{% else %}
+    <p>您未满18岁</p>
+{% endif %}
+
+
+
+</body>
+
+
+</html>

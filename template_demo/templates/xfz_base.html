@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>{% block title %} {% endblock %} -- 小饭桌</title>
+    {% block head %} {% endblock %}
+</head>
+
+<header>
+    <ul>
+        <li>
+            <a href="/">首页</a>
+        </li>
+        <li>
+            <a href="/course">创业课堂</a>
+        </li>
+    </ul>
+
+
+</header>
+
+
+{% block body %}
+我是来自父模版的
+{% endblock %}
+
+<footer>
+<h1 style="background-color:rgb(235, 91, 192);">
+    欢迎来到知了课堂
+</h1>
+
+
+
+
+</footer>
+
+
+</html>

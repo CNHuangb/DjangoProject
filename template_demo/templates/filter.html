@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>过滤器的使用</title>
+</head>
+
+<body>
+<h1 style="background-color:rgb(235, 91, 192);">
+    欢迎来到知了课堂 - 过滤器的使用
+</h1>
+
+
+<div>
+<p>
+
+    {{ greet|cut:" "}}
+
+</p>
+
+<p>
+
+    生日：{{ birthday|date:"Y-m-d" }}
+
+</p>
+
+<p>
+
+    个人简介：{{ profile|default:"我来了" }}
+
+</p>
+</div>
+
+
+<div>
+<p>
+
+    {{ html|safe }}
+
+</p>
+
+
+</div>
+
+
+
+</body>
+
+
+</html>

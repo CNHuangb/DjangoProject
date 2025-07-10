@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>with标签</title>
+</head>
+
+<body>
+<h1 style="background-color:rgb(235, 91, 192);">
+    欢迎来到知了课堂 - with标签
+</h1>
+
+
+<div>
+    {% with book1=books.1 %}
+        <p>
+            {{ book1.name }}:{{ book1.author }}
+        </p>
+
+    {% endwith %}
+</div>
+
+
+
+</body>
+
+
+</html>
