@@ -109,13 +109,17 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+
+TIME_ZONE = 'Asia/Shanghai'
+# TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
+# USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -146,3 +150,7 @@ DEFAULT_FROM_EMAIL = '11680917@qq.com'
 # MAIL_USERNAME = "11680917@qq.com"
 # MAIL_PASSWORD = "lrxtgxqmfawwbifi"
 # MAIL_DEFAULT_SENDER = "11680917@qq.com"
+
+
+
+LOGIN_URL = '/auth/login'

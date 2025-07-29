@@ -8,27 +8,26 @@
 
 <h1>博客列表</h1>
 <div class="row row-cols-2 row-gap-3">
-  <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <a href="#">Django零基础到项目实战</a>
-      </div>
-      <div class="card-body">
-        <p class="card-text" style="height: 80px;">如何学习Django跟着知了课堂黄老师学习Django是最快的~from django.http import HttpResponse
-          def book_list(request): return HttpRespons</p>
-      </div>
-      <div class="card-footer text-body-secondary d-inline-flex justify-content-between">
-        <div>
-          <img src="{% static 'image/avatar.webp' %}" class="rounded-circle me-2" width="30" height="30"> 知了课堂
+  {% for blog in blogs %}  
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <a href="{% url 'blog:blog_detail' blog_id=blog.id %}">{{ blog.title }}</a>
         </div>
-        <div>
-          发布时间：2024年3月29日 11:28
+        <div class="card-body">
+          <p class="card-text" style="height: 80px;">{{ blog.content|striptags|truncatechars:200 }}</p>
+        </div>
+        <div class="card-footer text-body-secondary d-inline-flex justify-content-between">
+          <div>
+            <img src="{% static 'image/avatar.webp' %}" class="rounded-circle me-2" width="30" height="30"> {{ blog.author.username }}
+          </div>
+          <div>
+            发布时间：{{ blog.pub_time|date:"Y年m月d日 h时i分" }}
+          </div>
         </div>
       </div>
     </div>
-
-  </div>
-
+  {% endfor %}
 </div>
 
 
